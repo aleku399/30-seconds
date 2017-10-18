@@ -1,0 +1,24 @@
+{
+  "name": "30seconds",
+  "version": "1.0.0",
+  "description": "scripts for 30 seconds game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleku399/30-seconds.git"
+  },
+  "author": "aleku399",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleku399/30-seconds/issues"
+  },
+  "homepage": "https://github.com/aleku399/30-seconds#readme",
+  "dependencies": {
+    "csvtojson": "^1.1.9",
+    "fs-extra": "^4.0.2",
+    "ramda": "^0.25.0"
+  }
+}

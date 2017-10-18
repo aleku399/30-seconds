@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+dist/
+.tmp/
+*.log
+*.tgz
+*.yaml
+.idea/
+.DS_Store
+yarn.lock
