@@ -1,9 +1,9 @@
-var fs = require('fs');
-var csv = require('fast-csv');
+const fs = require('fs');
+const csv = require('fast-csv');
 const R = require('ramda');
 
-var result = [];
-var stream = fs.createReadStream("30-seconds.csv");
+const result = [];
+const stream = fs.createReadStream("30-seconds.csv");
 
 csv
   .fromStream(stream)
@@ -12,17 +12,17 @@ csv
   })
   .on("end", function (data) {
     console.log("done", result[1]);
-    var flat = flatten(result);
-    var random = randomize(flat);
+    const flat = flatten(result);
+    const random = randomize(flat);
     console.log(unique(random))
   });
 
-flatten = arr => {
+const flatten = arr => {
   return  R.flatten(arr).filter(function (word){
     if (word) return word;
   })
 }
-randomize = (arr) => {
+const randomize = (arr) => {
   arr.map((name, index) => {
     var randomIndex = Math.floor(Math.random() * (arr.length));
     var itemAtIndex = arr[randomIndex];
@@ -31,9 +31,9 @@ randomize = (arr) => {
   })
   return arr
 }
-unique = (arr) => {
+const unique = (arr) => {
 return  R.uniq(arr).reduce((acc, curr, index)=> {
-    var size = 5;
+    const size = 5;
     if ((index % size) !== 0) { 
       acc.push(arr.slice(index, index + size));
     }
