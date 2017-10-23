@@ -23,7 +23,7 @@ const flatten = arr => {
   })
 }
 const randomize = (arr) => {
-  arr.map((name, index) => {
+  arr.forEach((name, index) => {
     var randomIndex = Math.floor(Math.random() * (arr.length));
     var itemAtIndex = arr[randomIndex];
     arr[randomIndex] = arr[arr.length - 1];
