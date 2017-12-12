@@ -1,6 +1,6 @@
 {
   "name": "30seconds",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "scripts for 30 seconds game",
   "main": "index.js",
   "scripts": {
